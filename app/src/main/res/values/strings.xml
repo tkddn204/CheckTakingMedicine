@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">복약 체크</string>
+    <string name="notification_active">노티가 켜졌음!</string>
+    <string name="notification_deactive">노티가 꺼졌음..</string>
+    <string name="morning">아침</string>
+    <string name="afternoon">점심</string>
+    <string name="evening">저녁</string>
+    <string name="notification_app_open_button">앱 열기</string>
+    <string name="complete_taking">먹음!</string>
+</resources>
