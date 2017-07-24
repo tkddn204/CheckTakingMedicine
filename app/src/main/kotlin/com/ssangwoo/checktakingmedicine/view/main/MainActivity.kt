@@ -1,4 +1,4 @@
-package com.ssangwoo.checktakingmedicine.view.Main
+package com.ssangwoo.checktakingmedicine.view.main
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -6,30 +6,35 @@ import android.util.Log
 import android.view.View
 import com.ssangwoo.checktakingmedicine.model.enums.NotificationId
 import com.ssangwoo.checktakingmedicine.R
-import com.ssangwoo.checktakingmedicine.view.Notification.NotificationHelper
-import com.ssangwoo.checktakingmedicine.view.Notification.RemoteViewsFactory
+import com.ssangwoo.checktakingmedicine.model.enums.MedicineTime
+import com.ssangwoo.checktakingmedicine.view.notification.NotificationHelper
+import com.ssangwoo.checktakingmedicine.view.notification.RemoteViewsFactory
+import io.realm.Realm
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var ui: MainUi
-    private lateinit var helper: NotificationHelper
+    private lateinit var notificationHelper: NotificationHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         ui = MainUi(activity_main)
-        helper = NotificationHelper(this)
+        notificationHelper = NotificationHelper(this)
+        DataBaseHelper.instance.realm = Realm.getDefaultInstance()
+        DataBaseHelper.instance.inItDatabase()
     }
 
     private fun sendNotification(id: Int) {
-        helper.notify(id, helper.getNotification(
-                RemoteViewsFactory(this).makeRemoteViews(id)))
+        notificationHelper.notify(id, notificationHelper.getNotification(
+                RemoteViewsFactory(this).makeRemoteViews()))
     }
 
     private fun removeNotification(id: Int) {
-        helper.remove(id)
+        DataBaseHelper.instance.removeTakenMedicine()
+        notificationHelper.remove(id)
     }
 
 

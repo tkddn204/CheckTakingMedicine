@@ -10,7 +10,7 @@ import android.support.test.espresso.matcher.ViewMatchers.withText
 import android.support.test.espresso.matcher.ViewMatchers.isChecked
 import android.support.test.rule.ActivityTestRule
 import android.support.test.runner.AndroidJUnit4
-import com.ssangwoo.checktakingmedicine.view.Main.MainActivity
+import com.ssangwoo.checktakingmedicine.view.main.MainActivity
 import org.hamcrest.Matchers
 import org.junit.Assert
 import org.junit.Rule

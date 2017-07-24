@@ -1,6 +1,7 @@
 package com.ssangwoo.checktakingmedicine.model.database
 
 import io.realm.RealmObject
+import io.realm.annotations.PrimaryKey
 import java.util.*
 
 /**
@@ -8,7 +9,9 @@ import java.util.*
  */
 
 open class TakingMedicineAlarm(
+        @PrimaryKey var id: Long = 0,
         var morningAlarm: Date = Date(),
         var afternoonAlarm: Date = Date(),
-        var nightAlarm: Date = Date()
+        var eveningAlarm: Date = Date(),
+        var alarmRepeat: Int = 1
 ): RealmObject()

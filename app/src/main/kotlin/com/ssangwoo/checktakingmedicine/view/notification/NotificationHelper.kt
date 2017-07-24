@@ -1,4 +1,4 @@
-package com.ssangwoo.checktakingmedicine.view.Notification
+package com.ssangwoo.checktakingmedicine.view.notification
 
 import android.app.NotificationManager
 import android.content.Context
@@ -9,7 +9,7 @@ import android.widget.RemoteViews
 /**
  * Created by ssangwoo on 2017-07-22.
  */
-internal class NotificationHelper(context: Context): ContextWrapper(context) {
+internal class NotificationHelper(context: Context) : ContextWrapper(context) {
 
     private val manager: NotificationManager by lazy {
         getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
@@ -32,6 +32,5 @@ internal class NotificationHelper(context: Context): ContextWrapper(context) {
     }
 
     private val smallIcon: Int
-        get() = android.R.drawable.stat_notify_chat
-
+        get() = android.R.drawable.stat_notify_more
 }
