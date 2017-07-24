@@ -6,7 +6,6 @@ import android.content.ContextWrapper
 import android.content.Intent
 import android.widget.RemoteViews
 import com.ssangwoo.checktakingmedicine.R
-import com.ssangwoo.checktakingmedicine.model.enums.MedicineTime
 import com.ssangwoo.checktakingmedicine.model.enums.NotificationAction
 
 /**
@@ -33,7 +32,7 @@ class RemoteViewsFactory(context: Context) : ContextWrapper(context) {
     }
 
     private fun makePendingIntent(action: String): PendingIntent {
-        val onClickIntent = Intent(this, NotificationButtonClickProvider::class.java)
+        val onClickIntent = Intent(this, NotificationBroadcastReceiver::class.java)
         onClickIntent.action = action
         return PendingIntent.getBroadcast(
                 this, 0, onClickIntent, PendingIntent.FLAG_UPDATE_CURRENT)

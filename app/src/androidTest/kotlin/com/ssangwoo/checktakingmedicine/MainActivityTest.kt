@@ -55,4 +55,9 @@ class MainActivityTests {
         Espresso.onView(withId(R.id.notification_switch_text))
                 .check(ViewAssertions.matches(withText(R.string.notification_deactive)))
     }
+
+    @Test
+    fun notificationButtonClick() {
+
+    }
 }

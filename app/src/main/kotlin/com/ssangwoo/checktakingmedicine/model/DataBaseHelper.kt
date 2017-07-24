@@ -58,7 +58,6 @@ class DataBaseHelper private constructor() {
                 MedicineTime.MORNING -> {
                     today.morning = !today.morning
                     if (today.morning) today.takeMorning = Date()
-                    Log.e(today.morning.toString(), today.takeMorning.toString())
                 }
                 MedicineTime.AFTERNOON -> {
                     today.afternoon = !today.afternoon

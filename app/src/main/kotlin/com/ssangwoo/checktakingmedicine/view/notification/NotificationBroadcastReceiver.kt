@@ -8,11 +8,13 @@ import com.ssangwoo.checktakingmedicine.model.enums.MedicineTime
 import com.ssangwoo.checktakingmedicine.model.enums.NotificationAction
 import com.ssangwoo.checktakingmedicine.model.enums.NotificationId
 import com.ssangwoo.checktakingmedicine.model.DataBaseHelper
+import com.ssangwoo.checktakingmedicine.view.App
+import io.realm.Realm
 
 /**
  * Created by ssangwoo on 2017-07-23.
  */
-class NotificationButtonClickProvider : BroadcastReceiver() {
+class NotificationBroadcastReceiver : BroadcastReceiver() {
 
     private lateinit var helper: NotificationHelper
 
@@ -44,6 +46,7 @@ class NotificationButtonClickProvider : BroadcastReceiver() {
         val remoteViews = RemoteViewsFactory(context).makeRemoteViews()
 
         // DB
+        DataBaseHelper.instance.realm = Realm.getDefaultInstance()
         if (DataBaseHelper.instance.isTakenMedicineToday(medicineTime)) {
             remoteViews.setTextViewText(id, medicineTime.title)
         } else {

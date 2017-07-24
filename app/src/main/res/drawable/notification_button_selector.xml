@@ -5,9 +5,5 @@
         android:drawable="@drawable/notification_button_normal" />
     <item
         android:state_pressed="true"
-        android:drawable="@drawable/notification_button_selected" />
-    <item
-        android:state_selected="true"
-        android:drawable="@drawable/notification_button_selected" />
-
+        android:drawable="@drawable/notification_button_pressed" />
 </selector>

@@ -18,7 +18,6 @@ internal class NotificationHelper(context: Context) : ContextWrapper(context) {
     fun getNotification(remoteViews: RemoteViews): NotificationCompat.Builder {
         return NotificationCompat.Builder(applicationContext)
                 .setCustomContentView(remoteViews)
-                //.setCustomBigContentView(expandedNotification)
                 .setOngoing(true)
                 .setSmallIcon(smallIcon)
     }
