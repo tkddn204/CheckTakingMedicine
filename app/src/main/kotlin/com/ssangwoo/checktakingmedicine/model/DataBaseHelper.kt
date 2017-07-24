@@ -1,4 +1,4 @@
-package com.ssangwoo.checktakingmedicine.view.main
+package com.ssangwoo.checktakingmedicine.model
 
 import android.util.Log
 import com.ssangwoo.checktakingmedicine.model.database.TakingMedicineAlarm

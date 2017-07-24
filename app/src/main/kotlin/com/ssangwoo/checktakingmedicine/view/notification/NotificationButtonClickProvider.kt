@@ -3,13 +3,11 @@ package com.ssangwoo.checktakingmedicine.view.notification
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import com.ssangwoo.checktakingmedicine.R
 import com.ssangwoo.checktakingmedicine.model.enums.MedicineTime
 import com.ssangwoo.checktakingmedicine.model.enums.NotificationAction
 import com.ssangwoo.checktakingmedicine.model.enums.NotificationId
-import com.ssangwoo.checktakingmedicine.view.main.DataBaseHelper
-import io.realm.Realm
+import com.ssangwoo.checktakingmedicine.model.DataBaseHelper
 
 /**
  * Created by ssangwoo on 2017-07-23.

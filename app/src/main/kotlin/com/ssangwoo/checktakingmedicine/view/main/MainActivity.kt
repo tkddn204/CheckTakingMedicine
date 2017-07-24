@@ -6,7 +6,7 @@ import android.util.Log
 import android.view.View
 import com.ssangwoo.checktakingmedicine.model.enums.NotificationId
 import com.ssangwoo.checktakingmedicine.R
-import com.ssangwoo.checktakingmedicine.model.enums.MedicineTime
+import com.ssangwoo.checktakingmedicine.model.DataBaseHelper
 import com.ssangwoo.checktakingmedicine.view.notification.NotificationHelper
 import com.ssangwoo.checktakingmedicine.view.notification.RemoteViewsFactory
 import io.realm.Realm
